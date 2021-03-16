@@ -12,12 +12,15 @@ wrapping around.
 eg 3,-2,5,-1
 """
 
-def Maxsubarray(array):
-    max_sub = 0
-    for i in range(len(array)-1):
-        for j in range(i,len(array)):
-            max_sub= max(max_sub,sum(array[i:j]))
-    return max_sub
+def Maxsubarray(array):   ##Solves without wrapping around
+    max_end_here = 0
+    max_so_far =0
+    for x in array:
+        max_end_here = max(x,max_end_here + x)
+        max_so_far = max(max_so_far,max_end_here)
+
+    return max_so_far
+       
 
 
 print(Maxsubarray([3,-2,5,-1]))
