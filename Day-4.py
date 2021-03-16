@@ -12,15 +12,25 @@ wrapping around.
 eg 3,-2,5,-1
 """
 
-def Maxsubarray(array):   ##Solves without wrapping around
-    max_end_here = 0
-    max_so_far =0
-    for x in array:
-        max_end_here = max(x,max_end_here + x)
-        max_so_far = max(max_so_far,max_end_here)
+def maximum_circular_subarray(arr):
+        max_subarray_sum_wraparound = sum(arr) - min_subarray_sum(arr)
+        return max(max_subarray_sum(arr), max_subarray_sum_wraparound)
 
+def max_subarray_sum(arr): #Solves without the wrap around Kadanes Algorithm
+    max_ending_here= 0
+    max_so_far =0
+    for x in arr:
+        max_ending_here = max(x, max_ending_here + x)
+        max_so_far = max(max_so_far, max_ending_here)
     return max_so_far
        
+def min_subarray_sum(arr):
+    min_ending_here =0
+    min_so_far = 0
+    for x in arr:
+        min_ending_here = min(x, min_ending_here + x)
+        min_so_far = min(min_so_far, min_ending_here)
+    return min_so_far
 
-
-print(Maxsubarray([3,-2,5,-1]))
+print(maximum_circular_subarray([8, -1, 3,
+4]))
