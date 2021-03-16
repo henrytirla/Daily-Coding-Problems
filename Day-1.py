@@ -16,5 +16,9 @@ def Suminlist(array,k):
     return sums,True
 
 
+
+
+
+
 a =Suminlist([3,2,1,6],9)
 print(a)
