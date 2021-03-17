@@ -21,5 +21,24 @@ for i in range(len(array)):
         if array[j] < array[i]:
              count += 1
              new_array.append(count)
-
 print(new_array)
+
+
+"""O(n) Solution Tips
+
+• Iterate backwards over the input list
+• Maintain a sorted list seen of the elements we've seen so far
+• Look at seen to see where the current element would fit in
+
+"""
+
+
+import bisect
+def smaller_counts(array):
+    result = []
+    seen=[]
+    for num in reversed(array):
+        i = bisect.bisect_left(seen, num)
+        result.append(i)
+        bisect.insort(seen, num)
+    return list(reversed(result))
