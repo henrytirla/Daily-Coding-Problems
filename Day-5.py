@@ -20,7 +20,7 @@ for i in range(len(array)):
     for j in range(1+i,len(array)):
         if array[j] < array[i]:
              count += 1
-             new_array.append(count)
+    new_array.append(count)
 print(new_array)
 
 
@@ -42,3 +42,5 @@ def smaller_counts(array):
         result.append(i)
         bisect.insort(seen, num)
     return list(reversed(result))
+
+print(smaller_counts([3,4,9,6,1],))
