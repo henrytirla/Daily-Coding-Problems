@@ -11,3 +11,15 @@ since:
 • There are 2 smaller elements to the right of 9
 • There is 1 smaller element to the right of 6
 • There are no smaller elements to the right of 1"""
+array = [3,4,9,6,1]
+
+
+new_array =[]
+for i in range(len(array)):
+    count =0
+    for j in range(1+i,len(array)):
+        if array[j] < array[i]:
+             count += 1
+             new_array.append(count)
+
+print(new_array)
