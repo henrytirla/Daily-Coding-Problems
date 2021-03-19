@@ -4,7 +4,7 @@ of anagrams of w. For example, given w is ab and s  is abxaba, return [ 0, 3, 4]
 w ="ab"
 s ="abxaba"
 indices_array=[]
-for i ,letter in enumerate(s,start=0):
+for i ,letter in enumerate(s):
     count = 0
     if s[i:i+2] == "ab" or s[i:i+2] == "ba":
         count +=1
