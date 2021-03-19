@@ -5,9 +5,8 @@ w ="ab"
 s ="abxaba"
 indices_array=[]
 for i ,letter in enumerate(s):
-    count = 0
+
     if s[i:i+2] == "ab" or s[i:i+2] == "ba":
-        count +=1
         indices_array.append(i)
 
 
