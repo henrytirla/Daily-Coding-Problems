@@ -23,7 +23,7 @@ def SortArray(arr):
 
     return output_array
 
-print(SortArray([1,2,3,4,5,6,8,9]))
+print(SortArray([1,2,3,4,5,6,8,9,10]))
 
 
 
