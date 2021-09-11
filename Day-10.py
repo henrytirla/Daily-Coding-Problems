@@ -15,32 +15,26 @@ sample output
 [1,4,9]
 test case
 
+try solving for [-4,1,2]
 reference : Algoexpert.io
 """
 
 
-
-def SortArray(arr):
+def sortedSquaredArray(arr):
+    # Write your code here.
     output_array = []
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            pass
-        if arr[i] > arr[j]:
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
 
-                x = arr[i] ** 2
-                output_array.append(x)
-        else:
-                x = arr[i] ** 2
-                output_array.append(x)
+
+    for i in range(len(arr)):
+        x = arr[i] ** 2
+        output_array.append(x)
+        output_array.sort()
+
 
     return output_array
 
-print(SortArray([1,2,3,5,6,8,9]))
 
-
+print(sortedSquaredArray([-4,1,2]))
 
 
 
