@@ -7,12 +7,6 @@
 # 3, 6].
 # Follow-up: What if you can't use division?
 
-# from functools import reduce
-# def products(nums):
-#     return [ reduce(lambda x,y: x * y, nums[:i] + nums[i+1:]) for i in range(len(nums)) ]
-# print(products([3,2,1]))
-# print(products([1, 2, 3, 4, 5]))
-
 
 def findProduct(A):
     n = len(A)
