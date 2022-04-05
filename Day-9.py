@@ -1,10 +1,18 @@
-"""You are given a string of length n and an integer k. The string can be manipulated
-by taking one of the first k letters and moving it to the end of the string.
-Write a program to determine the lexicographically smallest string that can be created
-after an unlimited number of moves.
+"""
 
-For example, suppose we are given the string da i 1 y and k = l. The best we can
-create in this case is ailyd.
+This problem was asked by Google.
 
+Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
 
+For example, given the following Node class
+
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+The following test should pass:
+
+node = Node('root', Node('left', Node('left.left')), Node('right'))
+assert deserialize(serialize(node)).left.left.val == 'left.left'
 """
