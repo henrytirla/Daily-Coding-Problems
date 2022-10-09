@@ -22,3 +22,20 @@ def Suminlist(array,k):
 
 a =Suminlist([3,2,1,6],9)
 print(a)
+
+"""Another solution
+
+def twoNumberSum(arr,targetSum):
+   hash_table={}
+   for num in range(len(arr)):
+       X= arr[num]
+       Y= targetSum - X
+       if Y not in hash_table:
+           hash_table.update({X:'True'})
+
+        
+       
+       else:
+           return X,Y
+   return []
+"""
