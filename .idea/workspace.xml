@@ -4,9 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d205ea04-e21b-4200-8af5-ce34c5c165fd" name="Default Changelist" comment="Q_ 11">
+    <list default="true" id="d205ea04-e21b-4200-8af5-ce34c5c165fd" name="Default Changelist" comment="Q_1 Another solution">
+      <change afterPath="$PROJECT_DIR$/Python/Q_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Q_9.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Q_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/Q_11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Q_9.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649186943470</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Q_1 Another solution">
+      <created>1665332254568</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665332254568</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +278,7 @@
     <MESSAGE value="renamed all questions" />
     <MESSAGE value="Q_9 answer" />
     <MESSAGE value="Q_ 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Q_ 11" />
+    <MESSAGE value="Q_1 Another solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Q_1 Another solution" />
   </component>
 </project>
