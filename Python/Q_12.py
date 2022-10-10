@@ -1,1 +1,1 @@
-"""Question for the day"""
+"""Question fjjor the day"""
