@@ -7,17 +7,22 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 You can modify the input array in-place."""
 
 
-def twoNumberSum(arr,targetSum):
-   hash_table={}
-   for num in range(len(arr)):
-       X= arr[num]
-       Y= targetSum - X
+def twoNumberSum(arr, targetSum):
+    # Write your code here.
+   arr.sort()
+   left =0
+   right = len(arr)-1
+   while left < right:
+       currentSum = arr[left] + arr[right]
 
-       if Y not in hash_table:
-           hash_table.update({X:'True'})
+       if currentSum == targetSum:
+          return [arr[left] ,arr[right]]
+       elif currentSum < targetSum:
+            left += 1
+       elif currentSum > targetSum:
+            right -= 1
+   return []
 
-       else:
-           return X,Y
 
 
 arr= [3, 5, -4, 8, 11, 1, -1, 6]
