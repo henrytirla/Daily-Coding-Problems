@@ -1,19 +1,12 @@
-/**This problem was recently asked by Google.
-
-Given a list of numbers and a number k,
-return whether any two numbers from the list add up to k.
-
-For example, given [10, 15, 3, 7] and k of 17.''''\\'''''''
-return true since 10 + 7 is 17 ***/
+/**
+Write a function that takes in a non-empty array of distinct integers and an
+integer representing a target sum. If any two numnbers in the input array sum up to the target summ
+the function should return them in an array, in any order. If no two numbers sum up to the
+target sum, the function should return an empty array
 
 
-function SuminList(array,k):
-       sums = []
 
-       for i in range(len(array) - 1):
-       first_num = array[i]
-       for j in range(i + 1,len(array)):
-        second_num = array[j]
-        if first_num + second_num == k:
-            sums.extend((first_num,second_num))
-return sums,True
+
+***/
+
+
