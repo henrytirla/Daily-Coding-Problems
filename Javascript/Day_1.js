@@ -9,4 +9,23 @@ target sum, the function should return an empty array
 
 ***/
 
-console.log("Testing")
+function twoNumberSum(array, targetSum) {
+
+   let l = 0;
+   let r = array.length -1;
+
+   array.sort( (a,b) => a-b );
+
+   while(l<r) {
+     let sum = array[l] + array[r];
+
+     if( sum == targetSum )
+       return [ array[l], array[r] ];
+     if( sum < targetSum)
+       l++;
+     else
+       r--;
+
+   }
+   return [];
+
