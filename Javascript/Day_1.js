@@ -9,4 +9,4 @@ target sum, the function should return an empty array
 
 ***/
 
-
+console.log("Testing")
