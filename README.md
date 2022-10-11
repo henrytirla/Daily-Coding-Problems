@@ -1,11 +1,7 @@
 # Daily-Coding-Problems
-Daily Coding Challenges To Practice Data-Structure Questions
+Daily Coding Challenges To Practice Interview Questions
 
-Questions will be divided per Data Structure
-Questions will be answered in Python and Javascript
-Questions will be chosen randomly so level of difficulty will not be sequential
-
-Time and space complexities are taken into consideration for each question.
+Questions Will be randomly choosen so difficulty will not be sequential
 
 
 "Whatever is unachievable, becomes achievable only by virtue of repeated study and practice
