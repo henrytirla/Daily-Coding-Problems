@@ -12,3 +12,9 @@ Note-toself: As in the python section i will use a Binary tree to solve this pro
 
 
 **/
+
+//import "d3-array";
+const d3 = require("d3-array")
+var a= [10,15,3,7];
+
+console.log(a);
