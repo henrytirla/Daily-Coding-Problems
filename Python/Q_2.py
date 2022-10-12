@@ -36,8 +36,8 @@ https://algodaily.com/lessons/an-intro-to-binary-trees-and-search-trees
  
 '''"""
 
-
 from bisect import bisect_left
+
 def two_sum(lst, K):
     lst.sort()
 
