@@ -14,7 +14,23 @@ Note-toself: As in the python section i will use a Binary tree to solve this pro
 **/
 
 //import "d3-array";
-const d3 = require("d3-array")
-var a= [10,15,3,7];
 
-console.log(a);
+var arr= [10, 15, 3, 7];
+var k = 17;
+function Check4Sum(arr,k,){
+  arr.sort();
+  let num = {};
+  	for (let i of arr){
+  		  if(k -i in num){
+  				 return true;
+  			}else{
+  				num[i]= false;
+  			}
+  	}
+  return false;
+
+
+
+}
+
+console.log(Check4Sum(arr,k))
