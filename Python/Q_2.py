@@ -11,6 +11,24 @@ array = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, -1, 10]
 
 """
+def checkSequenc(arr,sequence):
+    arr.sort()
+    sequence.sort()
+    arr_pointer =0
+    sequence_pointer =0
+    while arr_pointer < len(arr) and sequence_pointer < len(sequence):
+         if arr[arr_pointer] == sequence[sequence_pointer]:
+            sequence_pointer+= 1
+         arr_pointer +=1
+
+    return sequence_pointer == len(sequence)
+
+
+
+arr = [5, 1, 22, 25, 6, -1, 8, 10]
+sequence = [1, 6, -1, 10]
+
+print(checkSequenc(arr,sequence))
 
 
 
