@@ -13,19 +13,40 @@ targetSum =10
 
 
 
-# def twoNumberSum(arr,targetSum):
-#    hash_table={}
-#    for num in range(len(arr)):
-#        X= arr[num]
-#        Y= targetSum - X
-#        if Y not in hash_table:
-#            hash_table.update({X:'True'})
-#
-#
-#
-#        else:
-#            return X,Y
-#    return []
+def twoNumberSum(arr,targetSum):
+   hash_table={}
+   for num in range(len(arr)):
+       X= arr[num]
+       Y= targetSum - X
+       if Y not in hash_table:
+           hash_table.update({X:'True'})
+
+
+
+       else:
+           return X,Y
+   return []
 
 
 print(twoNumberSum(arr,targetSum))
+
+
+"""
+Solution Using Pointers
+def twoNumberSum(arr, targetSum):
+   
+   arr.sort()
+   left =0
+   right = len(arr)-1
+   while left < right:
+       currentSum = arr[left] + arr[right]
+
+       if currentSum == targetSum:
+          return [arr[left] ,arr[right]]
+       elif currentSum < targetSum:
+            left += 1
+       elif currentSum > targetSum:
+            right -= 1
+   return []
+
+"""
