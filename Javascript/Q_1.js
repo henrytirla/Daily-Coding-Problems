@@ -9,6 +9,8 @@ Sample Input
 array = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, -1, 10]
 ***/
+var array = [5, 1, 22, 25, 6, -1, 8, 10];
+var targetSum= 23;
 
 function twoNumberSum(array, targetSum) {
 
@@ -29,4 +31,7 @@ function twoNumberSum(array, targetSum) {
 
    }
    return [];
+}
 
+
+  console.log(twoNumberSum(array,targetSum))
