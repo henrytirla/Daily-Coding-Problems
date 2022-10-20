@@ -24,5 +24,6 @@ link to be reconstructed later in the same or another computer environment
 
 #useful resource
 https://www.youtube.com/watch?v=Qtf8ieq3zco
+https://www.youtube.com/watch?v=u4JAi2JJhI8
 """
 
