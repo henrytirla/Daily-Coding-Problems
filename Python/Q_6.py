@@ -1,12 +1,30 @@
 """
-This problem was asked by Stripe.
 
-Given an array of integers, find the first missing positive integer in linear time and constant space. In other words,
-find the lowest positive integer that does not exist in the array.
-The array can contain duplicates and negative numbers as well.
+Given two strings s and t, return true if t is an anagram of s,
+and false otherwise.
 
-For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3.
+An Anagram is a word or phrase formed by
+rearranging the letters of a different word or phrase,
+typically using all the original letters exactly once.
 
-You can modify the input array in-place.
+ Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+
+
+Constraints:
+
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+
+
+Follow up: What if the inputs contain Unicode characters?
+How would you adapt your solution to such a case?
 
 """
+
