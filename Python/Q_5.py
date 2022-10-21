@@ -1,7 +1,8 @@
 """
 
 Given an integer array nums, return true if any value appears at least twice in
-the array, and return false if every element is distinct.
+the array return true,
+and return false if every element is distinct.
 
 
 
@@ -23,6 +24,28 @@ Constraints:
 
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
+
+My algorithm
+use two pointer one at the begining and one at end
+add each value as key with value false
+if key found hash return true
 """
+
+def DuplicateNum(arr):
+    hashset = set()
+    for num in range(len(arr)):
+        if arr[num] in hashset:
+             return True
+        hashset.add(arr[num])
+    return False
+
+
+
+arr =[1,2,3,4,5,6,3]
+print(DuplicateNum(arr))
+
+
+
+
 
 
