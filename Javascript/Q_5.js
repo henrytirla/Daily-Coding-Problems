@@ -29,16 +29,16 @@ Constraints:
 **/
 
 function DuplicateNum(arr){
-    const hashset = [];
+    const hashset = new Set();
     for(let num =0;num<arr.length;num++){
-        if (hashset.includes(arr[num])){
+        if (hashset.has(arr[num])){
             return true
         }
-        hashset.push(arr[num])
+        hashset.add(arr[num])
     }
     return false
 }
 
-var arr = [1,2,3,4,5,6,3]
+var arr = [1,2,3,4,5,6]
 
 console.log(DuplicateNum(arr))
