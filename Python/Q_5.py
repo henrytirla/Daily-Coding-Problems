@@ -1,47 +1,28 @@
-"""This problem was asked by Google.
-
-Given the root to a binary tree, implement serialize(root),
-which serializes the tree into a string, and deserialize(s),
-which deserializes the string back into the tree.
-
-For example, given the following Node class
-
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-The following test should pass:
-
-node = Node('root', Node('left', Node('left.left')), Node('right'))
-assert deserialize(serialize(node)).left.left.val == 'left.left'
-
-##Definition
-
-Serialization is the process of converting a data structure or object into a sequence of bits
-so that it can be stroed in a file or memory buffer, or transmitted across a network connection
-link to be reconstructed later in the same or another computer environment
-
-#useful resource
-https://www.youtube.com/watch?v=Qtf8ieq3zco
-https://www.youtube.com/watch?v=u4JAi2JJhI8
 """
 
-def serialize(root):
-    if root is None:
-        return '#'
-    return '{} {} {}'.format(root.val, serialize(root.left), serialize(root.right))
+Given an integer array nums, return true if any value appears at least twice in
+the array, and return false if every element is distinct.
 
-def deserialize(data):
-    def helper():
-        val = next(vals)
-        if val == '#':
-            return None
-        node = Node(int(val))
-        node.left = helper()
-        node.right = helper()
-        return node
-    vals = iter(data.split())
-    return helper()
+
+
+Example 1:
+
+Input: nums = [1,2,3,1]
+Output: true
+Example 2:
+
+Input: nums = [1,2,3,4]
+Output: false
+Example 3:
+
+Input: nums = [1,1,1,3,3,4,3,2,4,2]
+Output: true
+
+
+Constraints:
+
+1 <= nums.length <= 105
+-109 <= nums[i] <= 109
+"""
 
 
