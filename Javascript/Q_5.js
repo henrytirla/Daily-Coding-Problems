@@ -27,3 +27,18 @@ Constraints:
 
 
 **/
+
+function DuplicateNum(arr){
+    const hashset = [];
+    for(let num =0;num<arr.length;num++){
+        if (hashset.includes(arr[num])){
+            return true
+        }
+        hashset.push(arr[num])
+    }
+    return false
+}
+
+var arr = [1,2,3,4,5,6,3]
+
+console.log(DuplicateNum(arr))
