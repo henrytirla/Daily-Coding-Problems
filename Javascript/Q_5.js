@@ -1,20 +1,28 @@
 /**
 
-This problem was asked by Google.
+Given an integer array nums, return true if any value appears at least twice in
+the array, and return false if every element is distinct.
 
-Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
 
-For example, given the following Node class
 
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-The following test should pass:
+Example 1:
 
-node = Node('root', Node('left', Node('left.left')), Node('right'))
-assert deserialize(serialize(node)).left.left.val == 'left.left'
+Input: nums = [1,2,3,1]
+Output: true
+Example 2:
+
+Input: nums = [1,2,3,4]
+Output: false
+Example 3:
+
+Input: nums = [1,1,1,3,3,4,3,2,4,2]
+Output: true
+
+
+Constraints:
+
+1 <= nums.length <= 105
+-109 <= nums[i] <= 109
 
 
 
