@@ -22,7 +22,7 @@ In order to find the product of numbers before i,
 
 ##Useful resource
 
-https://www.youtube.com/watch?v=9AGezNt8hXw
+https://www.youtube.com/watch?v=bNvIQI2wAjk
 
 My observation try understanding solution by decoupling the code.
 and run with debug to see what happens at each step.
