@@ -26,5 +26,31 @@ s and t consist of lowercase English letters.
 Follow up: What if the inputs contain Unicode characters?
 How would you adapt your solution to such a case?
 
+Useful Resource
+https://www.youtube.com/embed/9UtInBqnCgA
+
+To understand -> (function annotation)
+https://stackoverflow.com/questions/14379753/what-does-mean-in-python-function-definitions
+https://peps.python.org/pep-3107/
 """
+
+def checkAnagram(s,t) -> bool:
+    if len(s) != len(t):
+        return False
+    CountS,CountT = {}, {}
+    for i in range(len(s)):
+        CountS[s[i]] = 1+ CountS.get(s[i],0)
+        CountT[t[i]] = 1+ CountT.get(t[i],0)
+    for c in CountS:
+        if CountS[c] != CountT.get(c,0):
+            return False
+    return  True
+
+
+
+
+s = "anagram"
+t= "nagaran"
+
+print(checkAnagram(s,t))
 
