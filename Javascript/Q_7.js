@@ -36,3 +36,7 @@ https://neetcode.io/practice
 
 
 **/
+// var s = new Map()
+//  s= { 'a' => 3, 'n' => 1, 'g' => 1, 'r': 1, 'm' => 1 }
+// console.log(s)
+
