@@ -10,6 +10,8 @@
 
 
  **/
+
+/**
 function ProductSum(arr){
     var prefix_array=[];
     for (let i=0; i< arr.length; i++){
@@ -62,3 +64,23 @@ var arr=[3,2,1];
 console.log(ProductSum(arr))
 
 
+**/
+
+function ProductExceptself(nums){
+    let res = new Array(nums.length)
+    let prefix = 1;
+    for(let i=0; i < nums.length;i++) {
+        res[i] = prefix;
+        prefix *= nums[i];}
+    let postfix=1;
+    // Reverse Loop
+    for (var i = nums.length - 1; i >= 0; i--) {
+
+        res[i] *= postfix;
+        postfix *= nums[i];
+    }
+
+    return res
+}
+let arr =[1,2,3,4]
+console.log(ProductExceptself(arr))
