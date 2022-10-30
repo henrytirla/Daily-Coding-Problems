@@ -68,3 +68,26 @@ print(products(arr))
 # O(N) space.
 
 
+""""
+Below with O(1) space complexitiy
+num=[1,2,3,4]
+def ProductExceptSelf(nums):
+    res = [1] * len(nums)
+    prefix = 1
+    
+    for i in range(len(nums)):
+        prefix_arr.append(prefix)
+        res[i] = prefix
+        prefix *= nums[i]
+    postfix=1
+    for i in reversed(range(len(nums))):
+        res[i] *= postfix
+        postfix *= nums[i]
+
+    return res
+
+
+print(ProductExceptSelf(num))
+
+
+"""
