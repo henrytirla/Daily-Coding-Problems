@@ -42,7 +42,7 @@ def checkAnagram(s,t) -> bool:
         CountS[s[i]] = 1+ CountS.get(s[i],0)
         CountT[t[i]] = 1+ CountT.get(t[i],0)
     for c in CountS:
-        if CountS[c] != CountT.get(c,0):
+        if CountS[c] != CountT.get(c):
             return False
     return  True
 
@@ -50,7 +50,7 @@ def checkAnagram(s,t) -> bool:
 
 
 s = "anagram"
-t= "nagaran"
+t= "nagaram"
 
 print(checkAnagram(s,t))
 
