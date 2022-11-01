@@ -36,7 +36,31 @@ https://neetcode.io/practice
 
 
 **/
-// var s = new Map()
-//  s= { 'a' => 3, 'n' => 1, 'g' => 1, 'r': 1, 'm' => 1 }
-// console.log(s)
+let str = ["eat","tea","tan","ate","nat","bat"];
+function GroupAnagram(str){
+    var res ={};
+    for (let words in str){
+        let count= new Array(26).fill(0)
+        for(s=0;s<str[words].length;s++){
+            count[str[words][s].charCodeAt()-"a".charCodeAt()] += 1
 
+
+        }
+
+        if(!res[count]){
+            res[count] =[]
+            res[count].push(str[words])
+        }
+        else{
+            res[count].push(str[words])
+        }
+
+
+
+    }
+
+    return Object.values(res)
+     // return res
+}
+
+console.log(GroupAnagram(str))
