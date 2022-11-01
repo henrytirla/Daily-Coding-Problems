@@ -1,5 +1,7 @@
 """
-Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+Given an integer array nums and an integer k,
+return the k most frequent elements.
+You may return the answer in any order.
 
 
 
@@ -24,5 +26,30 @@ It is guaranteed that the answer is unique.
 Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
 
-
+#Solution Explanation
+https://www.youtube.com/embed/YPTqKIgVk-k
 """
+nums = [1,1,1,2,2,3]
+k = 2
+
+def MostFrequent(arr,k):
+    count={}
+    freq = [[]  for i in  range(len(arr)+1)]
+    for n in arr:
+      count[n] = 1 + count.get(n,0)
+    for number,num_count in count.items():
+        freq[num_count].append(number)
+
+    res=[]
+    for i in range(len(freq)-1,0,-1):
+        for i in freq[i]:
+            res.append(i)
+            if (len(res)== k):
+                return res
+
+
+
+
+    return freq
+
+print(MostFrequent(nums,k))
