@@ -29,7 +29,9 @@ Follow up: Your algorithm's time complexity must be better than O(n log n), wher
 #Solution Explanation
 https://www.youtube.com/embed/YPTqKIgVk-k
 """
-nums = [1,1,1,2,2,3]
+#nums = [1,1,1,2,2,3]
+#nums= [3,2,1,5,5,5,5,2]
+nums = [1,1,2,2,2,3]
 k = 2
 
 def MostFrequent(arr,k):
