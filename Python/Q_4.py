@@ -26,6 +26,14 @@ https://www.youtube.com/watch?v=bNvIQI2wAjk
 
 My observation try understanding solution by decoupling the code.
 and run with debug to see what happens at each step.
+
+
+##
+TIPS: Writing code comes secondary first you must understand.
+Can you actually solve a question in your mind.
+Understanding how the code works is secondary
+Understanding how an algorithm work come first
+If you can't then you can't write the code
 """
 
 
