@@ -1,5 +1,6 @@
 """
-Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be
+validated according to the following rules:
 
 Each row must contain the digits 1-9 without repetition.
 Each column must contain the digits 1-9 without repetition.
@@ -37,7 +38,10 @@ Input: board =
 ,[".",".",".","4","1","9",".",".","5"]
 ,[".",".",".",".","8",".",".","7","9"]]
 Output: false
-Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
+Explanation: Same as Example 1,
+
+ except with the 5 in the top left corner being modified to 8.
+  Since there are two 8's in the top left 3x3 sub-box, it is invalid.
 
 
 Constraints:
@@ -47,4 +51,54 @@ board[i].length == 9
 board[i][j] is a digit 1-9 or '.'.
 
 https://leetcode.com/problems/valid-sudoku/
+
+
+
+Solution Explanation
+https://www.youtube.com/watch?v=TjFXEUCMqI8&t=1s
 """
+import collections
+
+board= [["5","3",".",".","7",".",".",".","."]
+        ,["6",".",".","1","9","5",".",".","."]
+        ,[".","9","8",".",".",".",".","6","."]
+        ,["8",".",".",".","6",".",".",".","3"]
+       ,["4",".",".","8",".","3",".",".","1"]
+       ,["7",".",".",".","2",".",".",".","6"]
+      ,[".","6",".",".",".",".","2","8","."]
+      ,[".",".",".","4","1","9",".",".","5"]
+      ,[".",".",".",".","8",".",".","7","9"]]
+
+board2=[["8","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+
+
+from collections import defaultdict
+
+def ValidSudoku(board):
+    cols= collections.defaultdict(set)
+    row = collections.defaultdict(set)
+    square_check = collections.defaultdict(set)
+
+    for r in range(9):
+        for c in range(9):
+            if board[r][c] ==".":
+               continue
+            if(board[r][c] in cols[c] or board[r][c] in row[c] or board[r][c] in square_check[r//3,c//3]):
+                return False
+
+            cols[r].add(board[r][c])
+            row[c].add(board[r][c])
+            square_check[r//3,c//3].add(board[r][c])
+    return True
+
+
+#print(ValidSudoku(board2))
+print(ValidSudoku(board))
