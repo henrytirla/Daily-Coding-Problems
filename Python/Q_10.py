@@ -1,31 +1,92 @@
 """
+There's an algorithms tournament taking place in which teams of programmers compete against each other
+ to solve algorithmic problems as fast as possible. Teams compete in a round robin, where each team
+ faces off against all other teams. Only two teams compete against each other at a time, and for
+ each competition, one team is designated the home team, while the other team is the away team.
+ In each competition there's always one winner and one loser; there are no ties. A team receives
+ 3 points if it wins and 0 points if it loses. The winner of the tournament is the team that receives
+ the most amount of points.
 
-Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.
+Given an array of pairs representing the teams that have competed against each other and an array containing
+the results of each competition, write a function that returns the winner of the tournament. The input arrays
+are named competitions and results, respectively. The competitions array has elements in the form of [homeTeam,
+awayTeam], where each team is a string of at most 30 characters representing the name of the team. The results
+array contains information about the winner of each corresponding competition in the competitions array.
+Specifically, results[i] denotes the winner of competitions[i], where a 1 in the results array means that the
+home team in the corresponding competition won and a 0 means that the away team won.
 
-Machine 1 (sender) has the function:
+It's guaranteed that exactly one team will win the tournament and that each team will compete
+against all other teams exactly once. It's also guaranteed that the tournament will always have at least
+two teams.
 
-string encode(vector strs) {
-  // ... your code
-  return encoded_string;
-}
-Machine 2 (receiver) has the function:
-vector decode(string s) {
-  //... your code
-  return strs;
-}
-So Machine 1 does:
+Sample Input
+competitions = [
+  ["HTML", "C#"],
+  ["C#", "Python"],
+  ["Python", "HTML"],
+]
+results = [0, 0, 1]
+Sample Output
+"Python"
+// C# beats HTML, Python Beats C#, and Python Beats HTML.
+// HTML - 0 points
+// C# -  3 points
+// Python -  6 points
 
-string encoded_string = encode(strs);
-and Machine 2 does:
 
-vector strs2 = decode(encoded_string);
-strs2 in Machine 2 should be the same as strs in Machine 1.
+declare a dict
+loop through res
+   update dict with points
 
-Implement the encode and decode methods.
+   check if team res is found in dict - update dict value
 
-Note:
-The string may contain any possible characters out of 256 valid ascii characters. Your algorithm should be generalized enough to work on any possible characters.
-Do not use class member/global/static variables to store states. Your encode and decode algorithms should be stateless.
-Do not rely on any library method such as eval or serialize methods. You should implement your own encode/decode algorithm.
+   return max value of dict max(d, key=d.get)
+
 
 """
+
+#
+# print(competitions[0][0])
+def teamWinner(matches ,results):
+    result_dict={}
+    for num in range(len(results)):
+
+       if results[num] ==0:
+           winner =matches[num][1]
+           #result_dict.update({matches[num][1] :3})
+
+           if  winner in result_dict:
+               result_dict[winner] += 3
+           else:
+               result_dict[winner] = 3
+
+
+       elif results[num] ==1:
+           winner = matches[num][0]
+           #result_dict.update({winner:3})
+           if  winner in result_dict:
+               result_dict[winner] += 3
+           else:
+               result_dict[winner] = 3
+
+
+
+    return max(result_dict ,key=result_dict.get)
+    #return result_dict
+
+
+
+
+
+
+matches = [
+  ["HTML", "C#"],
+  ["C#", "Python"],
+  ["Python", "HTML"],
+]
+
+results=(0,0,1)
+
+print(teamWinner(matches,results))
+
+# Can you tell the time complexity of this solution?
