@@ -12,3 +12,19 @@ coins = [5, 7, 1, 1, 2, 3, 22]
 Sample Output
 20
 """
+
+
+def nonConstructibleChange(coins):
+  coins.sort()
+  current_change= 0
+  for coin in coins:
+    if coin > current_change+1:
+        return current_change+1
+    current_change+=coin
+  return current_change+1
+
+#coins = [5, 7, 1, 1, 2, 3, 22]
+coins =[1,2,5]
+print(nonConstructibleChange(coins))
+
+
