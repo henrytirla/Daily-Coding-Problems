@@ -1,31 +1,20 @@
-""""
-Write a program that sums each element of a list without itself
-
-ef Input [1,2,5]
-
-1+2,1+5, 2+1,2+5,5+1,5+2
-
-output[ 1,2,3,5,6,7]
-
-
-
-
 """
 
-list=[1,2,5]
-new_list=[]
-res=0
-leftIdx=0
-rightIdx= len(list)-1
+Write a function that takes in a non-empty array of distinct
+integers and an integer representing a target sum.
+The function should find all triplets in the array
+that sum up to the target sum and return a two-dimensional
+array of all these triplets. The numbers in each triplet should
+be ordered in ascending order, and the triplets themselves should
+ be ordered in ascending order with respect to the numbers they hold.
 
-while leftIdx <=rightIdx:
-      for i in range(1,len(list)+1):
-          if list[leftIdx] ==list[-i]:
-            new_list.append(list[leftIdx])
-          else:
-              res = list[leftIdx] + list[-i]
-              new_list.append(res)
-      leftIdx+=1
+If no three numbers sum up to the target sum, the function should return
+an empty array.
 
-#print(new_list)
-print(set(new_list))
+Sample Input
+array = [12, 3, 1, 2, -6, 5, -8, 6]
+targetSum = 0
+Sample Output
+[[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+
+"""
