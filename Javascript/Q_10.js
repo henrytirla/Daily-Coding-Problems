@@ -44,3 +44,47 @@ loop through res
 
 
 **/
+
+
+
+function findTournamentWinner(competitions, results) {
+    // Create a map to store the points of each team
+    const points = new Map();
+
+    // Loop through the competitions and results arrays
+    for (let i = 0; i < competitions.length; i++) {
+        const homeTeam = competitions[i][0];
+        const awayTeam = competitions[i][1];
+
+        // If the home team won, increment its points by 3
+        if (results[i] === 1) {
+            points.set(homeTeam, (points.get(homeTeam) || 0) + 3);
+        }
+        // If the away team won, increment its points by 3
+        else {
+            points.set(awayTeam, (points.get(awayTeam) || 0) + 3);
+        }
+    }
+
+    // Find the team with the most points
+    let maxPoints = 0;
+    let winner = "";
+    for (const [team, point] of points) {
+        if (point > maxPoints) {
+            maxPoints = point;
+            winner = team;
+        }
+    }
+
+    return winner;
+}
+
+
+const competitions = [  ["HTML", "C#"],
+    ["C#", "Python"],
+    ["Python", "HTML"],
+];
+const results = [0, 0, 1];
+
+console.log(findTournamentWinner(competitions, results));
+
