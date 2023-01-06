@@ -16,4 +16,43 @@ array = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]
 Sample Output
 true
 
+
+Algorith
+
+Put a pointer on last array
+and on start
+
+while R<L:
+ compare both pointer if L > R
+ return False
+
+
+
 """
+
+
+
+
+def isMonotonic(arr):
+    # Check if the array is empty or has only one element
+    if len(arr) <= 1:
+        return True
+
+    # Check if the array is non-decreasing
+    nonDecreasing = True
+    nonIncreasing = True
+
+    for i in range(1, len(arr)):
+        if arr[i] < arr[i - 1]:
+            nonDecreasing= False
+
+
+        elif arr[i] > arr[i - 1]:
+            nonIncreasing= False
+
+
+    return nonIncreasing or nonDecreasing
+
+array = [-1, -5, -10, -1100, -1100, -1101, -1102, -9001]
+print(isMonotonic(array))
+
