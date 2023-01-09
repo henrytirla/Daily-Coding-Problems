@@ -13,8 +13,19 @@ array = [
   [10,  9,  8, 7],
 ]
 Sample Output
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]"""
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+
+
+
+MENTAL MODEL
+
+When moving on the x-axis ie the horizontal line traverse columns XC for me
+
+when moving on Y-axis ie the vertical line traverse rows  YR for me
+
+"""
 # O(n) time | O(n) space - where n is the total number of elements in the array
+
 def spiralTraverse(array):
     result = []
     startRow, endRow = 0, len(array) - 1
@@ -28,21 +39,14 @@ def spiralTraverse(array):
             result.append(array[row][endCol])
 
         for col in reversed(range(startCol, endCol)):
-            # Handle the edge case when there's a single row
-            # in the middle of the matrix. In this case, we don't
-            # want to double-count the values in this row, which
-            # we've already counted in the first for loop above.
-            # See Test Case 8 for an example of this edge case.
+            a= startRow
+            b= endRow
             if startRow == endRow:
                 break
             result.append(array[endRow][col])
 
         for row in reversed(range(startRow + 1, endRow)):
-            # Handle the edge case when there's a single column
-            # in the middle of the matrix. In this case, we don't
-            # want to double-count the values in this column, which
-            # we've already counted in the second for loop above.
-            # See Test Case 9 for an example of this edge case.
+
             if startCol == endCol:
                 break
             result.append(array[row][startCol])
