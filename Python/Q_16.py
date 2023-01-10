@@ -26,42 +26,52 @@ when moving on Y-axis ie the vertical line traverse rows  YR for me
 """
 # O(n) time | O(n) space - where n is the total number of elements in the array
 
+"Commented this diagram to aid with my visualization of solution"
+# array = [
+          # Startcolumn
+# StartRow[1, 2,   3,   4],
+#         [12, 13, 14,  5],
+#         [11, 16, 15,  6],
+#         [10, 9,   8,  7],
+#
+# ]
+"""Moving in X- Axis horizontaly = Rows  XR
+   Moving in Y- Axis Vertically = Columns YC
+  result.append(array[what is the axis location][What is the variables location ])
+  """
+
+""
+
+
 def spiralTraverse(array):
+
     result = []
     startRow, endRow = 0, len(array) - 1
-    startCol, endCol = 0, len(array[0]) - 1
+    startColumn, endColumn = 0, len(array[0]) - 1
 
-    while startRow <= endRow and startCol <= endCol:
-        for col in range(startCol, endCol + 1):
+    while startRow <= endRow and startColumn <= endColumn:
+        for col in range(startColumn, endColumn + 1):
             result.append(array[startRow][col])
+        for rows in range(startRow + 1, endRow + 1):
+            result.append(array[rows][endColumn])
 
-        for row in range(startRow + 1, endRow + 1):
-            result.append(array[row][endCol])
-
-        for col in reversed(range(startCol, endCol)):
-            a= startRow
-            b= endRow
+        for col in reversed(range(startColumn, endColumn)):
             if startRow == endRow:
-                break
+                break;
             result.append(array[endRow][col])
 
         for row in reversed(range(startRow + 1, endRow)):
+            if startColumn == endColumn:
+                break;
 
-            if startCol == endCol:
-                break
-            result.append(array[row][startCol])
+            result.append(array[row][startColumn])
 
+        startColumn += 1
         startRow += 1
+        endColumn -= 1
         endRow -= 1
-        startCol += 1
-        endCol -= 1
 
     return result
-
-
-
-
-
 
 array = [
   [1,   2,  3, 4],
