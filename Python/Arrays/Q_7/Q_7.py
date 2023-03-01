@@ -46,7 +46,6 @@ https://www.geeksforgeeks.org/defaultdict-in-python/
 
 from collections import defaultdict
 
-str = ["eat","tea","tan","ate","nat","bat"]
 
 
 def GroupAnagram(str):
@@ -57,9 +56,12 @@ def GroupAnagram(str):
             count[ord(c)-ord("a")] +=1
         res[tuple(count)].append(s)
     return res.values()
-print(GroupAnagram(str))
+
+str = ["eat","tea","tan","ate","nat","bat"]
 
 
+if __name__ == '__main__':
+    print(list(GroupAnagram(str)))
 
 
 

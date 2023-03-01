@@ -41,39 +41,26 @@ ALgorithm
 
 """
 
-# def longest_peak(arr):
-#     leftIdx =0
-#     rightIdx= len(arr)-1
-#
-#     for i in range(len(arr)):
-#         while rightIdx > leftIdx:
-#               a=arr[leftIdx]
-#               b= arr[rightIdx]
-#               if arr[leftIdx]>arr[rightIdx]:
-#                  rightIdx-=1
-#               elif arr[leftIdx]== arr[rightIdx]:
-#                    rightIdx-=1
-#               elif arr[leftIdx] < arr[rightIdx]:
-#                    leftIdx +=1
-#         return [arr[leftIdx-1],arr[leftIdx],arr[leftIdx+1]]
-#
-#
-# arr= [1,2,3,5,6,4,0]
-# arr2=[1,2,3,3,4,0,10,6,5,-1,-3,2,3]
-# arr3= [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
-# print(longest_peak(arr3))
+def longest_peak(arr):
+    leftIdx =0
+    rightIdx= len(arr)-1
+
+    for i in range(len(arr)):
+        while rightIdx > leftIdx:
+              a=arr[leftIdx]
+              b= arr[rightIdx]
+              if arr[leftIdx]>arr[rightIdx]:
+                 rightIdx-=1
+              elif arr[leftIdx]== arr[rightIdx]:
+                   rightIdx-=1
+              elif arr[leftIdx] < arr[rightIdx]:
+                   leftIdx +=1
+        return [arr[leftIdx-1],arr[leftIdx],arr[leftIdx+1]]
 
 
-class Car:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
 
-# Create an instance of the Car class
-my_car = Car("Toyota", "Camry", 2020)
+arr3= [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
+print(longest_peak(arr3))
 
-# Access the instance variables
-print(my_car.make)
-print(my_car.model)
-print(my_car.year)
+if __name__ == '__main__':
+    longest_peak(arr3)

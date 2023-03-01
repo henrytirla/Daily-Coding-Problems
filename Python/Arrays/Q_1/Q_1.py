@@ -49,19 +49,12 @@ def twoNumberSum(arr,targetSum):
    return []
 
 
-def test_twoNumberSum():
-    arr = [3, 5, -4, 8, 11, 1, -1, 6]
-    targetSum = 10
-    assert twoNumberSum(arr, targetSum) == (-1,11)
+
 
 if __name__ == '__main__':
-    pytest.main(args=[__file__])
+    print(twoNumberSum(arr, targetSum))
 
 
-# print(twoNumberSum(arr,targetSum))
 
 
-#
-# if __name__ == "__main__":
-#    print(twoNumberSum(arr,targetSum))
 

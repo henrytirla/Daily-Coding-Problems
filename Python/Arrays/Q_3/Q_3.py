@@ -7,10 +7,6 @@ array = [1, 2, 3, 5, 6, 8, 9]
 Sample Output
 [1, 4, 9, 25, 36, 64, 81]
 
-
-
-
-
 """
 
 
@@ -40,7 +36,9 @@ def sortedSquaredArray(array):
 
 
 array = [-1, -2, -14, 5, 6, 8, 9]
-print(sortedSquaredArray(array))
+
+if __name__== '__main__':
+    print(sortedSquaredArray(array))
 
 
 

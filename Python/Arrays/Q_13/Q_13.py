@@ -51,8 +51,8 @@ def find_closest_pair(arr1,arr2):
 arrayOne = [-1, 5, 10, 20, 28, 3]
 arrayTwo = [26, 134, 135, 15, 17]
 
-print(find_closest_pair(arrayOne,arrayTwo))
-
+if __name__ == '__main__':
+    print(find_closest_pair(arrayOne, arrayTwo))
 
 """
 This algorithm first sorts both input arrays, and then uses two pointers (i and j) to iterate over 

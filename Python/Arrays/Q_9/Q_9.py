@@ -100,5 +100,7 @@ def ValidSudoku(board):
     return True
 
 
-#print(ValidSudoku(board2))
-print(ValidSudoku(board))
+
+if __name__ == '__main__':
+    print(ValidSudoku(board))
+

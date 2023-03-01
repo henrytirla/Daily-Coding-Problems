@@ -20,22 +20,22 @@ Sample Output
 
 
 
-
-def Move_element(arr,tomove):
-
-    leftIdx=0
-    rightIdx=len(arr)-1
-    while leftIdx < rightIdx:
-        if arr[rightIdx] == tomove:
-           rightIdx-=1
-        elif arr[leftIdx] != tomove:
-             leftIdx +=1
-        elif arr[leftIdx] == tomove and arr[rightIdx]!= tomove:
-             arr[leftIdx], arr[rightIdx]= arr[rightIdx],arr[leftIdx]
-             rightIdx-=1
-             leftIdx +=1
-
-    return arr
+#
+# def Move_element(arr,tomove):
+#
+#     leftIdx=0
+#     rightIdx=len(arr)-1
+#     while leftIdx < rightIdx:
+#         if arr[rightIdx] == tomove:
+#            rightIdx-=1
+#         elif arr[leftIdx] != tomove:
+#              leftIdx +=1
+#         elif arr[leftIdx] == tomove and arr[rightIdx]!= tomove:
+#              arr[leftIdx], arr[rightIdx]= arr[rightIdx],arr[leftIdx]
+#              rightIdx-=1
+#              leftIdx +=1
+#
+#     return arr
 
 
 
@@ -54,7 +54,11 @@ array = [2, 1, 2, 2, 2, 3, 4, 2]
 toMove = 2
 
 
-print(Move_element(array,toMove))
+
+
+if __name__ == '__main__':
+    print(Move_element(array, toMove))
+
 
 """The time complexity of this  solution is O(n), where n is the length of the input array.
  This is because the algorithm only needs to iterate over the array once, with two pointers, 

@@ -46,8 +46,10 @@ arr= [12, 3, 1, 2, -6, 5, -8, 6]
 
 targetSum =0
 
-print(find_tripplets(arr,targetSum))
 
+
+if __name__ == '__main__':
+    print(find_tripplets(arr, targetSum))
 
 
 """O(n)3 Solution

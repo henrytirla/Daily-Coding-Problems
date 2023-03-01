@@ -54,4 +54,7 @@ def MostFrequent(arr,k):
 
     return freq
 
-print(MostFrequent(nums,k))
+
+
+if __name__ == '__main__':
+    print(MostFrequent(nums, k))

@@ -52,5 +52,6 @@ def checkAnagram(s,t) -> bool:
 s = "anagram"
 t= "nagaram"
 
-print(checkAnagram(s,t))
+if __name__ == '__main__':
+    print(checkAnagram(s, t))
 

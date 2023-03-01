@@ -23,8 +23,9 @@ def nonConstructibleChange(coins):
     current_change+=coin
   return current_change+1
 
-#coins = [5, 7, 1, 1, 2, 3, 22]
-coins =[1,2,5]
-print(nonConstructibleChange(coins))
+coins = [5, 7, 1, 1, 2, 3, 22]
 
+
+if __name__ == '__main__':
+  print(nonConstructibleChange(coins))
 

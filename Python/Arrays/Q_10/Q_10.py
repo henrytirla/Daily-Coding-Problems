@@ -87,6 +87,7 @@ matches = [
 
 results=(0,0,1)
 
-print(teamWinner(matches,results))
 
-# Can you tell the time complexity of this solution?
+if __name__ == '__main__':
+    print(teamWinner(matches, results))
+

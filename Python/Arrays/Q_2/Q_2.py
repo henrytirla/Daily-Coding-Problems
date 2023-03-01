@@ -30,9 +30,9 @@ def checkSequenc(arr,sequence):
 arr = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, -1, 10]
 
-print(checkSequenc(arr,sequence))
 
-
+if __name__ == '__main__':
+    print(checkSequenc(arr,sequence))
 
 
 

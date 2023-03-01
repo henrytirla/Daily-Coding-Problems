@@ -80,4 +80,7 @@ array = [
   [10,  9,  8, 7],
 ]
 
-print(spiralTraverse(array))
+
+
+if __name__ == '__main__':
+    print(spiralTraverse(array))

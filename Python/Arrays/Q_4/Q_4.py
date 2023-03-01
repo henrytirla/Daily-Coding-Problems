@@ -69,11 +69,13 @@ def products(nums):
 
 arr=[1, 2, 3, 4,5]
 
-print(products(arr))
 #This runs in O(N) time and space,
 # since iterating over the input arrays takes O(N)
-# time and creating the prefix and suffix arrays take up
-# O(N) space.
+# time and creating the prefix and suffix arrays take up  O(N) space.
+
+
+if __name__ == "__main__":
+   print(products(arr))
 
 
 """"

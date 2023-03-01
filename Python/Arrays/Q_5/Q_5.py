@@ -42,7 +42,10 @@ def DuplicateNum(arr):
 
 
 arr =[1,2,3,4,5,6,3]
-print(DuplicateNum(arr))
+
+if __name__ == '__main__':
+    print(DuplicateNum(arr))
+
 
 
 
