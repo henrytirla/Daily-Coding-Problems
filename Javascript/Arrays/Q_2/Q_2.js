@@ -37,4 +37,4 @@ var sequence = [1, 6, -1, 10];
 
 console.log(checkSequence(array,sequence));
 
-
+module.exports=checkSequence;

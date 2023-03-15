@@ -33,3 +33,4 @@ function twoNumberSum(array, targetSum) {
 
 
   console.log(twoNumberSum(array,targetSum))
+module.exports = twoNumberSum;
