@@ -29,3 +29,30 @@
  Optimal Space & Time Complexity
  O(n) time | O(1) space - where n is the length of the input array
  */
+function longest_peak(arr) {
+    let longestPeakLength = 0;
+    let i = 1;
+    while (i < arr.length - 1) {
+        let isPeak = arr[i-1] < arr[i] && arr[i] > arr[i+1];
+        if (!isPeak) {
+            i += 1;
+            continue;
+        }
+        let leftIdx = i - 1;
+        while (leftIdx >= 0 && arr[leftIdx] < arr[leftIdx+1]) {
+            leftIdx -= 1;
+        }
+        let rightIdx = i + 1;
+        while (rightIdx < arr.length && arr[rightIdx] < arr[rightIdx-1]) {
+            rightIdx += 1;
+        }
+        let currentPeakLength = rightIdx - leftIdx - 1;
+        longestPeakLength = Math.max(longestPeakLength, currentPeakLength);
+        i = rightIdx;
+    }
+    return longestPeakLength;
+}
+
+arr= [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
+
+console.log(longest_peak(arr))
