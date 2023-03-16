@@ -42,7 +42,7 @@ function longest_peak(arr) {
         while (leftIdx >= 0 && arr[leftIdx] < arr[leftIdx+1]) {
             leftIdx -= 1;
         }
-        let rightIdx = i + 1;
+        let rightIdx = i + 2;
         while (rightIdx < arr.length && arr[rightIdx] < arr[rightIdx-1]) {
             rightIdx += 1;
         }
