@@ -56,3 +56,4 @@ function longest_peak(arr) {
 arr= [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
 
 console.log(longest_peak(arr))
+module.exports = longest_peak;
