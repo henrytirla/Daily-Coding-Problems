@@ -32,30 +32,35 @@ Make sure to keep track of the longest peak you find as you iterate through the 
 Optimal Space & Time Complexity
 O(n) time | O(1) space - where n is the length of the input array
 
-ALgorithm
--Start with two pointers at extremities
--If right pointer < left pointer mover right pointer else move left pointer
 
--if left pointer >
+
+
 
 
 """
 
 def longest_peak(arr):
-    leftIdx =0
-    rightIdx= len(arr)-1
+    longestPeakLength=0
+    i= 1
+    while i < len(arr)-1:
+        isPeak = arr[i-1]< arr[i] and arr[i] > arr[i+1]
+        if not isPeak:
+           i+=1
+           continue
 
-    for i in range(len(arr)):
-        while rightIdx > leftIdx:
-              a=arr[leftIdx]
-              b= arr[rightIdx]
-              if arr[leftIdx]>arr[rightIdx]:
-                 rightIdx-=1
-              elif arr[leftIdx]== arr[rightIdx]:
-                   rightIdx-=1
-              elif arr[leftIdx] < arr[rightIdx]:
-                   leftIdx +=1
-        return [arr[leftIdx-1],arr[leftIdx],arr[leftIdx+1]]
+        leftIdx = i-1
+        while leftIdx >=0 and arr[leftIdx] < arr[leftIdx+1]:
+              leftIdx-=1
+        rightIdx = i+2
+        while rightIdx <len(arr) and arr[rightIdx]< arr[rightIdx-1]:
+            rightIdx +=1
+
+        currentPeakLength = rightIdx - leftIdx -1
+        longestPeakLength = max(longestPeakLength, currentPeakLength)
+        i= rightIdx
+    return longestPeakLength
+
+
 
 
 

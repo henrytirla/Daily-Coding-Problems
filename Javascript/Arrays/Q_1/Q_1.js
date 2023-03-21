@@ -13,7 +13,7 @@ var targetSum= 23;
 function twoNumberSum(array, targetSum) {
 
    let l = 0;
-   let r = array.length -1;
+   let r = array.lengh -1;
 
    array.sort( (a,b) => a-b );
 
