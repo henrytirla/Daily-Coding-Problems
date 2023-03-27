@@ -21,3 +21,49 @@ Sample Output #2
 
 
 """
+
+
+
+# O(n) time | O(n) space - where n is the length of the input array
+def firstDuplicateValue(array):
+    seen = set()
+    for value in array:
+        if value in seen:
+            return value
+        seen.add(value)
+    return -1
+arr=[2,1,5,3,3,2,4]
+if __name__ == '__main__':
+    print(firstDuplicateValue(arr))
+
+
+
+"""Optimal Solution Mutating Array"""
+# O(n) time | O(1) space - where n is the length of the input array
+# def firstDuplicateValue(array):
+#     for value in array:
+#         absValue = abs(value)
+#         if array[absValue - 1] < 0:
+#             return absValue
+#         array[absValue - 1] *= -1
+#     return -1
+
+
+
+"""Non Optimal Solution  O(n^2)"""
+# def DuplicateValue(arr):
+#     minumum_index= len(arr)
+#     for i in range(len(arr)):
+#         for j in range(i+1,len(arr)):
+#             if arr[i]==arr[j] and j < minumum_index:
+#                 minumum_index= j
+#
+#     if minumum_index != len(arr):
+#        return arr[minumum_index]
+#     else:
+#         return -1
+#
+# arr= [2,1,5,3,3,2,4]
+# arr2=[1,2,3,4,5]
+# if __name__ == '__main__':
+#     print(DuplicateValue(arr))
