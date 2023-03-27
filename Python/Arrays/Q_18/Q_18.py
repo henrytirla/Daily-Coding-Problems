@@ -42,7 +42,10 @@ def arrayOfProducts(array):
 
     return products
 
-print(arrayOfProducts(arr))
+
+
+if __name__ == '__main__':
+    print(arrayOfProducts(arr))
 
 
 
