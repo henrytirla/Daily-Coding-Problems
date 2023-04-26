@@ -13,3 +13,23 @@ Sample Output
 [[1, 2], [3, 8], [9, 10]]
 // Merge the intervals [3, 5], [4, 7], and [6, 8].
 // The intervals could be ordered differently."""
+
+
+intervals = [[1, 2], [3, 5], [4, 7], [6, 8], [9, 10]]
+
+def mergeOverlappingIntervals(intervals):
+    intervals.sort()
+    result_arr= [intervals[0]]
+    for i in range(len(intervals)):
+
+        if result_arr[-1][1]>=intervals[i][0]:
+           result_arr[-1][1]=max(result_arr[-1][1],intervals[i][1])
+
+        else:
+            result_arr.append(intervals[i])
+    return result_arr
+
+
+
+if __name__ == '__main__':
+    mergeOverlappingIntervals(intervals)
