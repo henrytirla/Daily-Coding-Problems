@@ -1,15 +1,32 @@
 """
+Zero Sum Subarray
+You're given a list of integers nums.
+Write a function that returns a boolean representing
+whether there exists a zero-sum subarray of nums.
 
-Four Number Sum
-Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. The function should find all quadruplets in the array that sum up to the target sum and return a two-dimensional array of all these quadruplets in no particular order.
-
-If no four numbers sum up to the target sum, the function should return an empty array.
+A zero-sum subarray is any subarray where all of the values add up to zero.
+A subarray is any contiguous section of the array. For the purposes of this problem,
+a subarray can be as small as one element and as long as the original array.
 
 Sample Input
-array = [7, 6, 4, -1, 1, 2]
-targetSum = 16
+nums = [-5, -5, 2, 3, -2]
 Sample Output
-[[7, 6, 4, -1], [7, 6, 1, 2]] // the quadruplets could be ordered differently
-
-
+True // The subarray [-5, 2, 3] has a sum of 0
 """
+
+def ZeroSubArray(array):
+    sum_set={0}
+    current_sum= 0
+    for num in array:
+        current_sum+=num
+
+        if current_sum in sum_set:
+           return True
+        sum_set.add(current_sum)
+
+    return False
+
+if __name__ == '__main__':
+    nums = [-2, -3, -1, 2, 3, 4, -5, -3, 1, 2]
+    print(ZeroSubArray(nums))
+
