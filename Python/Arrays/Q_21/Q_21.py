@@ -1,17 +1,50 @@
+"""Best Seat
+You walk into a theatre you're about to see a show in.
+The usher within the theatre walks you to your row and mentions you're allowed
+to sit anywhere within the given row. Naturally you'd like to sit in the seat
+that gives you the most space. You also would prefer this space to be evenly
+distributed on either side of you (e.g. if there are three empty seats in a row,
+you would prefer to sit in the middle of those three seats).
+
+Given the theatre row represented as an integer array,
+return the seat index of where you should sit.
+Ones represent occupied seats and zeroes represent empty seats.
+
+You may assume that someone is always sitting in the first and last seat of the row.
+Whenever there are two equally good seats, you should sit in the seat with the lower index.
+If there is no seat to sit in, return -1.
+The given array will always have a length of at least one and contain only ones and zeroes.
+
+Sample Input : seats = [1, 0, 1, 0, 0, 0, 1]
+Sample Output :4
+
 """
 
-Zero Sum Subarray
-You're given a list of integers nums. Write a function that returns a boolean representing whether there exists a zero-sum subarray of nums.
+def bestSeat(arr):
+    maxSpace=0
+    bestPlace=-1
 
-A zero-sum subarray is any subarray where all of the values add up to zero.
- A subarray is any contiguous section of the array. For the purposes of this problem,
-  a subarray can be as small as one element and as long as the original array.
+    leftIdx= 0
 
-Sample Input
-nums = [-5, -5, 2, 3, -2]
-Sample Output
-True // The subarray [-5, 2, 3] has a sum of 0
+    while leftIdx < len(arr):
+          rightIdx= leftIdx+ 1
+          while rightIdx < len(arr) and arr[rightIdx]==0:
+             rightIdx+=1
+
+          availableSpace= rightIdx-leftIdx-1
+          if availableSpace > maxSpace:
+              bestPlace = (leftIdx+ rightIdx)//2
+              maxSpace= availableSpace
+          leftIdx=rightIdx
+    return bestPlace
 
 
 
-"""
+
+
+if __name__ == '__main__':
+    seat = [1, 0, 1, 0, 0, 0, 1]
+    print(bestSeat(seat))
+
+
+
