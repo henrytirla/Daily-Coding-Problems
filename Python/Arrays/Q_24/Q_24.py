@@ -1,13 +1,18 @@
-"""Largest Range
-Write a function that takes in an array of integers and returns an array of length 2 representing the largest range of integers contained in that array.
 
-The first number in the output array should be the first number in the range, while the second number should be the last number in the range.
+"""
+Write a function that takes in a non-empty array of distinct integers and an integer
+ representing a target sum. The function should find all quadruplets in the array that
+ sum up to the target sum and return a two-dimensional array of all these quadruplets
+ in no particular order.
 
-A range of numbers is defined as a set of numbers that come right after each other in the set of real integers. For instance, the output array [2, 6] represents the range {2, 3, 4, 5, 6}, which is a range of length 5. Note that numbers don't need to be sorted or adjacent in the input array in order to form a range.
-
-You can assume that there will only be one largest range.
+If no four numbers sum up to the target sum, the function should return an empty array.
 
 Sample Input
-array = [1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6]
+array = [7, 6, 4, -1, 1, 2]
+targetSum = 16
 Sample Output
-[0, 7]"""
+[[7, 6, 4, -1], [7, 6, 1, 2]] // the quadruplets could be ordered differently
+"""
+
+
+
