@@ -1,17 +1,15 @@
 """
 
-Min Rewards
-Imagine that you're a teacher who's just graded the final exam in a class. You have a list of student scores on the final exam in a particular order (not necessarily sorted), and you want to reward your students. You decide to do so fairly by giving them arbitrary rewards following two rules:
+Subarray Sort
+Write a function that takes in an array of at least two integers and that returns an array
+of the starting and ending indices of the smallest subarray in the input array that needs
+to be sorted in place in order for the entire input array to be sorted (in ascending order).
 
-All students must receive at least one reward.
-Any given student must receive strictly more rewards than an adjacent student (a student immediately to the left or to the right) with a lower score and must receive strictly fewer rewards than an adjacent student with a higher score.
-Write a function that takes in a list of scores and returns the minimum number of rewards that you must give out to students to satisfy the two rules.
-
-You can assume that all students have different scores; in other words, the scores are all unique.
+If the input array is already sorted, the function should return [-1, -1].
 
 Sample Input
-scores = [8, 4, 2, 1, 3, 6, 7, 9, 5]
+array = [1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19]
 Sample Output
-25 // you would give out the following rewards: [4, 3, 2, 1, 2, 3, 4, 5, 1]
+[3, 9]
 
 """
