@@ -17,7 +17,7 @@ function FourNumberSums(array,targetSum){
     let PairSum={}
     let quadruplets=[]
 
-    for(i=1;i<=array.length-1;i++){
+    for(i=1;i<=array.length;i++){
         for(j=i+1;j<=array.length;j++){
             const currentSum= array[i] + array[j]
             const difference= targetSum -currentSum
