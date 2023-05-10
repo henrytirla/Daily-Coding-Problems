@@ -13,3 +13,24 @@ Sample Output
 [3, 9]
 
 """
+
+def subarraySort(array):
+    leftValue=-1
+    rightValue= -1
+    maxValue= array[0]
+    for i in range(1, len(array)):
+        if array[i] < maxValue:
+            leftValue = i
+        else:
+            maxValue = array[i]
+    minValue = array[len(array)-1]
+    for i in reversed(range(0,len(array))):
+        if array[i] > minValue:
+           rightValue = i
+        else:
+            minValue = array[i]
+    return [rightValue,leftValue]
+
+if __name__ == '__main__':
+    array = [1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19]
+    print(subarraySort(array))
