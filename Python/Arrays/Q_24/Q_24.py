@@ -13,7 +13,6 @@ targetSum = 16
 Sample Output
 [[7, 6, 4, -1], [7, 6, 1, 2]] // the quadruplets could be ordered differently
 """
-
 def four_number_sum(array, target_sum):
     pair_sums = {}
     quadruplets = []
@@ -35,7 +34,6 @@ def four_number_sum(array, target_sum):
                 pair_sums[current_sum].append([array[k], array[i]])
 
     return quadruplets
-
 
 
 
