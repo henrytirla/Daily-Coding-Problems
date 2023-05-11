@@ -34,7 +34,7 @@ def largestRange(arr):
            currentLength = i - num
            if currentLength > maxLength:
                maxLength = currentLength
-               bestRange = [num, i-1]
+               bestRange = [num, currentLength-1]
    return  bestRange
 
 if __name__ == '__main__':
