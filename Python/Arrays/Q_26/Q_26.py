@@ -19,5 +19,24 @@ array = [1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6]
 Sample Output
 [0, 7]
 """
+array = [1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6]
+
 
 def largestRange(arr):
+   nums= set(arr)
+   maxLength= 0
+   bestRange=[]
+   for num in arr:
+       if num-1 not in nums:
+           i=num
+           while i in nums:
+               i +=1
+           currentLength = i - num
+           if currentLength > maxLength:
+               maxLength = currentLength
+               bestRange = [num, i-1]
+   return  bestRange
+
+if __name__ == '__main__':
+    array = [1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6]
+    print(largestRange(array))
