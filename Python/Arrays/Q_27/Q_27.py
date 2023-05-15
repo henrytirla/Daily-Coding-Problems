@@ -18,3 +18,47 @@ Sample Input
 scores = [8, 4, 2, 1, 3, 6, 7, 9, 5]
 Sample Output
 25 // you would give out the following rewards: [4, 3, 2, 1, 2, 3, 4, 5, 1]"""
+
+
+
+def minRewards(scores):
+    reward= [1 for _ in scores]
+
+    for i in range(1,len(scores)):
+        if scores[i] > scores[i-1]:
+
+            reward[i] =reward[i-1] +1
+
+
+    for i in reversed(range(len(scores)-2)):
+          if scores[i] > scores[i+1]:
+              reward[i]= max(reward[i],reward[i+1]+1)
+
+
+    return sum(reward)
+
+
+
+
+
+
+if __name__ == '__main__':
+    scores = [8, 4, 2, 1, 3, 6, 7, 9, 5]
+    print(minRewards(scores))
+
+
+"""Time Complexity: O(n)
+The time complexity of this solution is linear, or O(n), 
+where n is the length of the input list. This is because 
+we perform two separate passes over the list of scores - 
+once from left to right, and once from right to left. 
+Each pass takes O(n) time, but since they are not nested, 
+the time complexities add together, resulting in 2*O(n). 
+However, in Big O notation, we drop the constant, so the 
+final time complexity remains O(n).
+
+Space Complexity: O(n)
+The space complexity of this solution is also O(n), where n is the 
+length of the input list. This is because we create a new list called 
+rewards that is the same length as the input list. All other variables 
+used in the solution take constant space, so the overall space complexity is O(n)."""
