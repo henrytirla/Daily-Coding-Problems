@@ -6,8 +6,8 @@ representing the largest range of integers contained in that array.
 The first number in the output array should be the first number in the range,
 while the second number should be the last number in the range.
 
-A range of numbers is defined as a set of numbers that come right after each other i
-n the set of real integers. For instance, the output array [2, 6]
+A range of numbers is defined as a set of numbers that come right after each other in
+the set of real integers. For instance, the output array [2, 6]
 represents the range {2, 3, 4, 5, 6}, which is a range of length 5.
 Note that numbers don't need to be sorted or adjacent in the input array
 in order to form a range.
