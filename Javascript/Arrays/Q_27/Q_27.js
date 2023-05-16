@@ -30,7 +30,7 @@ function minRewards(scores){
 
         }
     }
-    for(i=scores.length-2;i>=0;i--){
+    for(i=scores.length-1;i>=0;i--){
         if(scores[i]> scores[i+1]){
             reward[i]=Math.max(reward[i],reward[i+1]+1)
         }
