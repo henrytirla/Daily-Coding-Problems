@@ -40,3 +40,67 @@ blocks = [
 reqs = ["gym", "school", "store"]
 Sample Output
 3 // at index 3, the farthest you'd have to walk to reach a gym, a school, or a store is 1 block; at any other index, you'd have to walk farther"""
+blocks = [
+    {
+        "gym": False,
+        "school": True,
+        "store": False,
+    },
+    {
+        "gym": True,
+        "school": False,
+        "store": False,
+    },
+    {
+        "gym": True,
+        "school": True,
+        "store": False,
+    },
+    {
+        "gym": False,
+        "school": True,
+        "store": False,
+    },
+    {
+        "gym": False,
+        "school": True,
+        "store": True,
+    },
+]
+reqs = ["gym", "school", "store"]
+
+
+def apartmentHunting(blocks, reqs):
+    n = len(blocks)
+    distanceStoring = [dict() for _ in range(n)]
+    # l -> r
+    for i in range(n):
+        for reg in reqs:
+            distanceStoring[i][reg] = float('inf')
+            if blocks[i][reg]:
+                distanceStoring[i][reg] = 0
+            elif i > 0:
+                distanceStoring[i][reg] = distanceStoring[i - 1][reg] + 1
+    # r -> l
+    for i in range(n - 1, -1, -1):
+        for reg in reqs:
+            if blocks[i][reg]:
+                distanceStoring[i][reg] = 0
+            else:
+                if i < n - 1:
+                    distanceStoring[i][reg] = min(distanceStoring[i + 1][reg] + 1, distanceStoring[i][reg])
+
+                    # compare
+    res = [0, max(distanceStoring[0].values())]
+    for i in range(1, n):
+        maxValue = max(distanceStoring[i].values())
+
+        if res[1] > maxValue:
+            res[0] = i
+            res[1] = maxValue
+
+    return res[0]
+
+
+if __name__ == '__main__':
+    print(apartmentHunting(blocks,reqs))
