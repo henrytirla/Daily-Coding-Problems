@@ -40,6 +40,7 @@ blocks = [
 reqs = ["gym", "school", "store"]
 Sample Output
 3 // at index 3, the farthest you'd have to walk to reach a gym, a school, or a store is 1 block; at any other index, you'd have to walk farther"""
+
 blocks = [
     {
         "gym": False,
@@ -69,18 +70,21 @@ blocks = [
 ]
 reqs = ["gym", "school", "store"]
 
-
 def apartmentHunting(blocks, reqs):
     n = len(blocks)
     distanceStoring = [dict() for _ in range(n)]
+
     # l -> r
     for i in range(n):
         for reg in reqs:
             distanceStoring[i][reg] = float('inf')
+
             if blocks[i][reg]:
                 distanceStoring[i][reg] = 0
             elif i > 0:
                 distanceStoring[i][reg] = distanceStoring[i - 1][reg] + 1
+
+
     # r -> l
     for i in range(n - 1, -1, -1):
         for reg in reqs:
@@ -92,6 +96,7 @@ def apartmentHunting(blocks, reqs):
 
                     # compare
     res = [0, max(distanceStoring[0].values())]
+    #This code block is responsible for finding the block with the maximum minimum distance to any required building.
     for i in range(1, n):
         maxValue = max(distanceStoring[i].values())
 
@@ -102,5 +107,9 @@ def apartmentHunting(blocks, reqs):
     return res[0]
 
 
+
 if __name__ == '__main__':
     print(apartmentHunting(blocks,reqs))
+
+
+"""In summary, the solution first calculates the distances from each block to the required buildings in both directions (left to right and right to left) using dynamic programming. Then, it finds the block with the maximum minimum distance to any required building and returns its index as the optimal block."""
