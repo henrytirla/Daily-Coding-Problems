@@ -13,3 +13,31 @@ Can you do this using just one forward pass through the array?
 
 
 """
+import pytest
+
+arr=[3, 7, 8, 3, 6, 1]
+def ViewSun(arr):
+
+
+    count=1
+    idx= len(arr)-2
+    for i in reversed(range(len(arr))):
+        if arr[idx] > arr[i]:
+           count+=1
+
+        idx-=1
+    return count
+
+
+
+@pytest.mark.parametrize("arr, expected_count", [
+    #Testcase
+    ([3, 7, 8, 3, 6, 1], 3),
+
+
+])
+def test_ViewSun(arr, expected_count):
+    assert ViewSun(arr) == expected_count
+
+# Run the tests
+pytest.main()
