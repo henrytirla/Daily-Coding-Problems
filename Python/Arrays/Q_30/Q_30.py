@@ -113,3 +113,5 @@ if __name__ == '__main__':
 
 
 """In summary, the solution first calculates the distances from each block to the required buildings in both directions (left to right and right to left) using dynamic programming. Then, it finds the block with the maximum minimum distance to any required building and returns its index as the optimal block."""
+
+

@@ -18,3 +18,7 @@ meetingDuration = 30
 Sample Output
 [['11:30', '12:00'], ['15:00', '16:00'], ['18:00', '18:30']]
 """
+
+def calendarMatching(calendar1, dailyBounds1, calendar2, dailyBounds2, meetingDuration):
+    # Write your code here.
+    pass
