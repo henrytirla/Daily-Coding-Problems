@@ -11,7 +11,7 @@ isn't necessarily the array's majority element; for example, the arrays [3, 2, 2
 
 You can assume that the input array will always have a majority element."""
 
-
+#Boyer-Moore Voting Algorithm. This algorithm effectively finds the majority element in a single pass through the array, maintaining a counter for the majority element candidate.
 
 class Solution:
     def majorityElement(self, nums: list[int]) -> list[int]:
