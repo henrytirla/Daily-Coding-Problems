@@ -13,7 +13,7 @@ class Solution():
     def count_Building(self, buildings: list[int]) -> int:
         currentMax= buildings[0]
         buildingCount= 1
-        for i in range(0,len(buildings)):
+        for i in range(1,len(buildings)):
             if  buildings[i] > currentMax:
                 currentMax = buildings[i]
                 buildingCount+=1
