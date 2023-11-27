@@ -10,8 +10,6 @@ Ordering in the output doesn’t matter.
 def test_find_leaders():
     sol= Solution()
     arr = [16, 17, 4, 3, 5, 2],
-
-    Output: [17, 5, 2]
     assert sol.find_leaders([16, 17, 4, 3, 5, 2]) ==[2,5,17]
 
 class Solution:
