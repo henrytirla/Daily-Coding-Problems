@@ -22,3 +22,45 @@ Input: A[] = [1, 2, -2, -1], Output: -1
 Explanation: There is no such equilibrium index in the array.
 """
 
+def test_find_Equilibrum():
+    sol= Solution()
+
+    #Testcases
+    assert sol.find_Equilibrum([0, 1, 3, -2, -1])==1
+    assert sol.find_Equilibrum([1, 2, -2, -1])==-1
+
+
+
+class Solution:
+    #Non Optimal Approach O(n2) Time Complexity
+    # def find_Equilibrum(self,arr:list[int])->int:
+    #     n= len(arr)
+    #
+    #     for i in range(n):
+    #         leftSide = sum(arr[:i])
+    #         rightSide= sum(arr[i+1:])
+    #
+    #         if leftSide== rightSide:
+    #             return i
+    #     return -1
+
+
+    def find_Equilibrum(self,arr:list[int])->int:
+        n= len(arr)
+
+        prefix_sum = [0] * n
+        prefix_sum[0] = arr[0]
+        for i in range(1, n):
+            prefix_sum[i] = prefix_sum[i - 1] + arr[i]
+
+        for i in range(n):
+            # Calculate the sum of elements to the left using prefix sum
+            left_sum = prefix_sum[i] - arr[i]
+
+            # Calculate the sum of elements to the right using prefix sum
+            right_sum = prefix_sum[-1] - prefix_sum[i]
+
+            if left_sum == right_sum:
+                return i
+
+        return -1
