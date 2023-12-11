@@ -25,13 +25,22 @@ Example 2: Input: MCMIV, Output: 1904
 
 def test_roman_Decimal():
     sol= Solution()
+    assert sol.roman_Decimal("IV") == 4
 
-    assert sol.roman_Decimal("XL") == 40
-    assert sol.roman_Decimal("LX")== 60
+    assert sol.roman_Decimal("XC") == 90
+    assert sol.roman_Decimal("MCMIV")== 1904
 
 
 class Solution:
     def roman_Decimal(self,romanstring:str)-> int:
         roman_dict={"I": 1,"V":5,"X":10,"L":50, "C":100,"D":500,"M":1000}
+        decimal_value=0
+        for i in range(len(romanstring)):
+            current_value = roman_dict[romanstring[i]]
 
-        pass
+            if i == len(romanstring) - 1 or roman_dict[romanstring[i]] >= roman_dict[romanstring[i + 1]]:
+                decimal_value += current_value
+            else:
+                decimal_value -= current_value
+
+        return decimal_value
