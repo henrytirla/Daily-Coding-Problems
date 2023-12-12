@@ -8,7 +8,7 @@ We need to solve this problem without using division operations.
 
 
 def test_productExceptSelf():
-    # assert Solution().productExceptSelf([2, 1, 3, 4]) == [12, 24, 8, 6]
+    assert Solution().productExceptSelf([2, 1, 3, 4]) == [12, 24, 8, 6]
     assert Solution().productExceptSelf([5, 1, 4, 2]) == [8, 40, 10, 20]
     assert Solution().productExceptSelf([1, 8, 6, 2, 4]) == [384, 48, 64, 192, 96]
 
