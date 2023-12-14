@@ -1,8 +1,8 @@
 """Given an n x n square matrix, write a program to rotate the matrix by 90 degrees in the anti-clockwise direction. The goal is to perform the matrix rotation in place, meaning we need to rotate the matrix without using extra space.
 
-Example 1:[1, 2, 3        =>      [3, 6, 9,
+Example 1:[1, 2, 3        =>      [1, 4, 7,
              4, 5, 6                2, 5, 8,
-              7, 8, 9]               1, 4, 7]
+              7, 8, 9]               3, 6, 9]
 
 
 
